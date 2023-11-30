@@ -39,7 +39,7 @@ const Countdown = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">New Year Countdown</h1>
+        <h1 className="text-4xl font-bold mb-4">Countdown to 2024</h1>
         {isNewYear ? (
           <div>
             <p className="text-2xl font-semibold">Happy New Year!</p>
