@@ -3,6 +3,7 @@ import Snowfall from "react-snowfall";
 import { TimezoneDropdown } from "./TimezoneDropdown";
 import { calculateTimeLeft } from "../lib/calculateTimeLeft";
 import moment from "moment-timezone";
+
 export const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft("UTC"));
   const [isNewYear, setIsNewYear] = useState(false);
@@ -13,12 +14,10 @@ export const Countdown = () => {
       const newTimeLeft = calculateTimeLeft(timezone);
       setTimeLeft(newTimeLeft);
 
-      if (
-        newTimeLeft.days === 0 &&
+      if (newTimeLeft.days === 0 &&
         newTimeLeft.hours === 0 &&
         newTimeLeft.minutes === 0 &&
-        newTimeLeft.seconds === 0
-      ) {
+        newTimeLeft.seconds === 0) {
         setIsNewYear(true);
       }
     }, 1000);
@@ -40,16 +39,14 @@ export const Countdown = () => {
         <TimezoneDropdown
           value={timezone}
           onChange={handleTimezoneChange}
-          options={timezoneOptions}
-        />
+          options={timezoneOptions} />
       </div>
 
       <Snowfall
         color="#FFF"
         snowflakeCount={1}
         className="absolute"
-        radius={[1, 5]}
-      />
+        radius={[1, 5]} />
       <div className="text-center relative z-20">
         <h1 className="text-4xl font-bold mb-4">Countdown to 2024</h1>
         {isNewYear ? (
