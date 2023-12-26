@@ -15,6 +15,7 @@
     "react-snowfall": "^1.2.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "prettier": "^3.1.1",
