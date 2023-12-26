@@ -47,7 +47,7 @@ export const Countdown = () => {
 
       <Snowfall
         color="#FFF"
-        snowflakeCount={1}
+        snowflakeCount={10}
         className="absolute"
         radius={[1, 5]}
       />
