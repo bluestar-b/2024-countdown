@@ -17,12 +17,12 @@ export const TimezoneDropdown = ({ value, onChange, options }) => {
         {value}
       </div>
       {isOpen && (
-        <div className="absolute top-10 left-0 overflow-x-hidden border rounded-md z-40 bg-blue-500/40 shadow-md max-h-80 overflow-y-auto">
+        <div className="absolute top-10 left-0 overflow-x-hidden border rounded-md z-40 p-2 bg-blue-500/40 shadow-md max-h-80 overflow-y-auto">
           {options.map((option, index) => (
             <div
               key={index}
               onClick={() => handleOptionClick(option)}
-              className="cursor-pointer p-1.5 hover:bg-blue-700 rounded-md"
+              className="cursor-pointer p-1.5 hover:bg-transparent transition-colors hover:border rounded-md"
             >
               {option}
             </div>
