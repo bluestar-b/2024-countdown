@@ -12,12 +12,12 @@ export const TimezoneDropdown = ({ value, onChange, options }) => {
     <div className="relative">
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-transparent p-1.5 border rounded-md cursor-pointer font-bold"
+        className="bg-transparent z-50 p-1.5 border rounded-md cursor-pointer font-bold"
       >
         {value}
       </div>
       {isOpen && (
-        <div className="absolute top-10 left-0 bg-transparent overflow-x-hidden border rounded-md shadow-md max-h-80 overflow-y-auto">
+        <div className="absolute top-10 left-0 overflow-x-hidden border rounded-md z-40 bg-blue-500/40 shadow-md max-h-80 overflow-y-auto">
           {options.map((option, index) => (
             <div
               key={index}
