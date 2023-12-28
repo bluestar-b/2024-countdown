@@ -34,7 +34,7 @@ export const Countdown = () => {
   const addLeadingZero = (value) => (value < 10 ? `0${value}` : value);
 
   const timezoneOptions = moment.tz.names();
-
+  const numberClass = "text-3xl font-bold"
   return (
     <div className="flex items-center justify-center h-screen relative">
       <div className="absolute top-4 left-4">
@@ -47,12 +47,12 @@ export const Countdown = () => {
 
       <Snowfall
         color="#FFF"
-        snowflakeCount={10}
+        snowflakeCount={1}
         className="absolute"
         radius={[1, 5]}
       />
       <div className="text-center relative z-20">
-        <h1 className="text-4xl font-bold mb-4">Countdown to 2024</h1>
+        <h1 className="text-4xl font-bold mb-4">COUNTDOWN TO 2024</h1>
         {isNewYear ? (
           <div>
             <p className="text-2xl font-semibold">Happy New Year!</p>
@@ -61,22 +61,22 @@ export const Countdown = () => {
           <div>
             {timeLeft.days > 0 && (
               <div>
-                <span className="text-2xl font-semibold">
+                <span className={numberClass}>
                   {addLeadingZero(timeLeft.days)}
                 </span>{" "}
                 days{" "}
               </div>
             )}
             <div>
-              <span className="text-2xl font-semibold">
+              <span className={numberClass}>
                 {addLeadingZero(timeLeft.hours)}
               </span>{" "}
               hours{" "}
-              <span className="text-2xl font-semibold">
+              <span className={numberClass}>
                 {addLeadingZero(timeLeft.minutes)}
               </span>{" "}
               minutes{" "}
-              <span className="text-2xl font-semibold">
+              <span className={numberClass}>
                 {addLeadingZero(timeLeft.seconds)}
               </span>{" "}
               seconds
