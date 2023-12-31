@@ -10,7 +10,6 @@ import moment from "moment-timezone";
 
 
 
-
 export const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft("UTC"));
   const [isNewYear, setIsNewYear] = useState(false);
@@ -52,8 +51,8 @@ export const Countdown = () => {
   return (
     <div className="flex items-center justify-center h-screen relative">
       <div className="absolute top-4 left-4 flex flex-col items-center">
-        <div className="fixed right-2">
-          <p className="text-lgxl font-semibold">{currentDate} {currentTime}</p>
+        <div className="fixed right-4">
+          <p className="text-lg font-semibold">{currentDate} {currentTime}</p>
         </div>
         
         <TimezoneDropdown
